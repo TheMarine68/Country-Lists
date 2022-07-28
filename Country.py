@@ -51,7 +51,10 @@ def main():
     countries = {"CA": "Canada",
                  "US": "United States",
                  "MX": "Mexico"}
-
+    
+if __name__ == '__main__':
+    main()
+    
     display_menu()
     while True:
         command = input("Command: ")
