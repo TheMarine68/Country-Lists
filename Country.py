@@ -8,16 +8,16 @@ def display_menu():
     print("exit - Exit program")
     print()
 
-def display_codes(countries):
+def display_code(countries):
     code = list(countries.keys())
-    codes.sort()
-    codes_line = "Country codes: "
-    for code in codes:
+    code.sort()
+    code_line = "Country codes: "
+    for code in code:
         code_line += code + ""
     print(code_line)
 
 def view(countries):
-    display_codes(countries)
+    display_code(countries)
     code = input("Enter country code: ")
     code = code.upper()
     if code in countries:
@@ -46,15 +46,12 @@ def delete(countries):
          print(f"{name} was deleted.\n")
     else:
          print("There is no country with that code.\n")
-
-def main():
+    
+if __name__ == '__main__':
     countries = {"CA": "Canada",
                  "US": "United States",
                  "MX": "Mexico"}
-    
-if __name__ == '__main__':
-    main()
-    
+        
     display_menu()
     while True:
         command = input("Command: ")
@@ -65,12 +62,6 @@ if __name__ == '__main__':
             add(countries)
         elif command == "del":
             delete(countries)
-        elif command == "exit":
-            print("Bye!")
-            break
-        else:
-            print("Not a valid command. Please try again.\n")
-
         elif command == "exit":
             print("Bye!")
             break
