@@ -1,5 +1,3 @@
-# Earl Miller CIS261 Country Lab
-
 def display_menu():
     print("COMMAND MENU")
     print("view - country name")
