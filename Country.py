@@ -13,7 +13,7 @@ def display_code(countries):
     code.sort()
     code_line = "Country codes: "
     for code in code:
-        code_line += code + ""
+        code_line += code + " "
     print(code_line)
 
 def view(countries):
